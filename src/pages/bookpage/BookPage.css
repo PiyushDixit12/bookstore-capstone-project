@@ -1,0 +1,38 @@
+.search-container {
+    width: 100%;
+    padding-top: 5%;
+}
+
+.search-author-price-container {
+    width: auto;
+    display: flex;
+}
+
+.search-input-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-name-container {
+    width: 40%;
+    /* margin-left: 5%; */
+}
+
+.search-author-container,
+.search-price-container,
+.search-release-date-container {
+    /* width: 25%; */
+    margin-left: 1%;
+}
+
+.search-price-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container h2 {
+    text-align: center;
+    padding-bottom: 1rem;
+}

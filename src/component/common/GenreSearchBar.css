@@ -1,0 +1,19 @@
+/* GenreSearchBar.css */
+
+.genre-search-bar {
+    display: flex;
+    justify-content: start;
+    background-color: rgb(241, 235, 235);
+    padding: 10px;
+}
+
+.genre-search-bar a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+.genre-search-bar a:hover {
+    color: #fa7727;
+}

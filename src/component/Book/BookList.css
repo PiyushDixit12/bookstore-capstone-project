@@ -1,0 +1,33 @@
+/* BookList.css */
+
+.book-list {
+    max-width: 100%;
+    padding: 5px 10px;
+    margin: 0 auto;
+}
+
+.search-and-sort {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-box {
+    display: flex;
+    width: 30%;
+}
+
+.book-list input,
+.book-list select {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.book-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-list li {
+    margin-bottom: 10px;
+}

@@ -1,13 +1,85 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;600&family=Hanken+Grotesk:wght@500;600;700&display=swap');
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Hanken Grostesk;
+    }
+
+    :root {
+      --primary-color: #fb995d;
+      --primary-color-bright: #fa7727;
+      --white-color: #fff;
+    }
+
+    span {
+      font-family: Chivo Mono;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: Chivo Mono;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .input-error {
+      margin-top: 10px;
+      color: red;
+    }
+
+    .container {
+      width: 90%;
+      margin: auto;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .justify-center {
+      justify-content: center
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .align-center {
+      align-items: center;
+    }
+
+    .text-primary {
+      color: var(--primary-color);
+    }
+
+    .position-relative {
+      position: relative !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.button-primary {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: var(--primary-color-bright);
+  color: var(--white-color);
+  margin-top: 2rem;
+  box-shadow: 2px 2px 5px #ddd;
+  transition: 0.2s ease-in;
+  border: none;
+  outline: none;
+  font-family: Chivo Mono;
+  font-size: 1rem;
+}
+
+.button-primary:hover {
+  background: #000;
 }

@@ -1,0 +1,38 @@
+.dark-shadow {
+    box-shadow: 4px 4px 15px #111;
+}
+
+.light-shadow {
+    box-shadow: 4px 4px 15px #ccc;
+}
+
+.search-input-form-container {
+    display: flex;
+    padding: 1rem;
+    background: var(--white-color);
+    border-radius: 5px;
+    margin-top: 20px;
+    /* box-shadow: 4px 4px 15px #111; */
+}
+
+.search-input {
+    outline: none;
+    flex: 1;
+    border: none;
+    font-size: 1.2rem;
+    padding-left: 10px;
+}
+
+.search-button {
+    padding: .5rem 1.2rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+}
+
+.search-button:hover {
+    background-color: var(--primary-color-bright);
+}
