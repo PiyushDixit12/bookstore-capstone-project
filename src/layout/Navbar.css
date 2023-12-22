@@ -73,6 +73,12 @@
 
 /*=========================== responsive navbar============================ */
 
+@media screen and (max-width:460px) {
+    .nav-links {
+        font-size: 2rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .nav-links-container {
         display: flex;
@@ -84,27 +90,24 @@
         /* top: 0;
         right: -300px; */
         top: 0px;
-        right: -70%;
+        right: -100%;
         height: 100vh;
-        width: 70%;
+        width: 250px;
         background-color: #e3e6f3;
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.01);
         padding: 80px 0 0 10px;
         transition: 0.9s ease;
         align-self: flex-start;
     }
-
     .navbar-container {
         background: #000;
     }
-
     .nav-links-container.active {
-        left: 30%;
+        right: 0%;
         /* background: #000; */
         cursor: pointer;
         transition: 0.9s ease;
     }
-
     .nav-links,
     .nav-links-dark {
         color: black;
@@ -113,13 +116,11 @@
         margin-top: 25px;
         transition: 0.9s ease;
     }
-
     .mobile {
         display: flex;
         align-items: center;
         color: white;
     }
-
     .close {
         position: absolute;
         top: 30px;

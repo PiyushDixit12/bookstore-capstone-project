@@ -3,6 +3,103 @@
     padding-top: 5%;
 }
 
+.search-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-container-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-name-author-container {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 10px;
+}
+
+.search-name-container,
+.search-author-container {
+    margin-right: 10px;
+    width: max-content;
+}
+
+.search-categories-type-container {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-categories-container {
+    margin-right: 10px;
+}
+
+@media screen and (max-width:460px) {
+    :root {
+        font-size: 0.7rem;
+    }
+
+    .search-categories-type-container {
+        flex-wrap: wrap;
+    }
+
+    .search-categories-container {
+        width: 100% !important;
+    }
+
+    .search-type-container {
+        width: 100% !important;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width:760px) {
+    .search-name-author-container {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .search-categories-type-container {
+        width: 100%;
+        justify-content: center !important;
+    }
+
+    .search-name-container,
+    .search-author-container {
+        width: 100% !important;
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width:1350px) and (min-width:760px) {
+    .search-name-author-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-name-container,
+    .search-author-container {
+        width: 50%;
+        margin-right: 3px;
+    }
+
+    .search-categories-type-container {
+        width: 100%;
+    }
+}
+
+
+/* .search-container {
+    width: 100%;
+    padding-top: 5%;
+}
+
 .search-author-price-container {
     width: auto;
     display: flex;
@@ -19,13 +116,13 @@
 
 .search-name-container {
     width: 40%;
-    /* margin-left: 5%; */
+    /* margin-left: 5%; 
 }
 
 .search-author-container,
 .search-price-container,
 .search-release-date-container {
-    /* width: 25%; */
+    /* width: 25%; 
     margin-left: 1%;
 }
 
@@ -45,5 +142,7 @@
 
     /* .search-author-container {
         width: 90%;
-    } */
+    }
 }
+
+*/
