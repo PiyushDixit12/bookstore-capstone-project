@@ -55,3 +55,8 @@
     background: var(--white-color);
     color: #333;
 }
+@media screen and (max-width:768px) {
+    .footer-form {
+        width: 100%;
+    }
+}

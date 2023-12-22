@@ -36,3 +36,8 @@
 .search-button:hover {
     background-color: var(--primary-color-bright);
 }
+@media screen and (max-width:450px) {
+    .search-button {
+        margin-left: -15%;
+    }
+}

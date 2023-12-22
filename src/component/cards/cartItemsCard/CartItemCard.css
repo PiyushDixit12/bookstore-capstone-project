@@ -39,3 +39,9 @@
 .delete-btn:hover {
     background-color: #555;
 }
+@media screen and (max-width:425px) {
+    .cart-item {
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+    }
+}

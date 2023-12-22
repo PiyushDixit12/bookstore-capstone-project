@@ -6,11 +6,13 @@
 .search-author-price-container {
     width: auto;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .search-input-container {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
@@ -35,4 +37,13 @@
 .search-container h2 {
     text-align: center;
     padding-bottom: 1rem;
+}
+@media screen and (max-width:768px) {
+    .search-name-container {
+        width: 100%;
+    }
+
+    /* .search-author-container {
+        width: 90%;
+    } */
 }
