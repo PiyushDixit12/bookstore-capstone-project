@@ -13,7 +13,6 @@ export const ProductsListingAll = ({books}) => {
                                 booksData={books}
                                 bookImage={value?.published_works?.[0]?.cover_art_url}
                                 bookId={value?.canonical_isbn}
-                                // bookImage={productImage}
                                 bookAuthor={value.authors?.[0]}
                                 bookName={value?.title}
                                 bookPrice={Math.trunc(parseInt(value?.canonical_isbn) / 35451731256)}

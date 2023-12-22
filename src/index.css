@@ -1,85 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@400;500;600&family=Hanken+Grotesk:wght@500;600;700&display=swap');
-
 * {
-  margin: 0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Hanken Grostesk;
-    }
+}
 
-    :root {
-      --primary-color: #fb995d;
-      --primary-color-bright: #fa7727;
-      --white-color: #fff;
-    }
+ :root {
+   --primary-color: #fb995d;
+   --primary-color-bright: #fa7727;
+   --white-color: #fff;
+ }
 
-    span {
-      font-family: Chivo Mono;
-    }
+span {
+  font-family: Chivo Mono;
+}
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: Chivo Mono;
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Chivo Mono;
+}
 
-    h1 {
-      font-size: 2.5rem;
-    }
+h1 {
+  font-size: 2.5rem;
+}
 
-    .input-error {
-      margin-top: 10px;
-      color: red;
-    }
+.input-error {
+  margin-top: 10px;
+  color: red;
+}
 
-    .container {
-      width: 90%;
-      margin: auto;
-    }
+.container {
+  width: 90%;
+  margin: auto;
+}
 
-    .flex {
-      display: flex;
-    }
+.flex {
+  display: flex;
+}
 
-    .justify-center {
-      justify-content: center
-    }
+.justify-center {
+  justify-content: center
+}
 
-    .justify-between {
-      justify-content: space-between;
-    }
+.justify-between {
+  justify-content: space-between;
+}
 
-    .align-center {
-      align-items: center;
-    }
+.align-center {
+  align-items: center;
+}
 
-    .text-primary {
-      color: var(--primary-color);
-    }
+.text-primary {
+  color: var(--primary-color);
+}
 
-    .position-relative {
-      position: relative !important;
+.position-relative {
+  position: relative !important;
 }
 
 .button-primary {
-  display: inline-block;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 5px;
-  background-color: var(--primary-color-bright);
-  color: var(--white-color);
-  margin-top: 2rem;
-  box-shadow: 2px 2px 5px #ddd;
-  transition: 0.2s ease-in;
-  border: none;
-  outline: none;
-  font-family: Chivo Mono;
-  font-size: 1rem;
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: var(--primary-color-bright);
+    color: var(--white-color);
+    margin-top: 2rem;
+    box-shadow: 2px 2px 5px #ddd;
+    transition: 0.2s ease-in;
+    border: none;
+    outline: none;
+    font-family: Chivo Mono;
+    font-size: 1rem;
 }
 
 .button-primary:hover {
-  background: #000;
+    background: #000;
+}
+@media screen and (max-width:768px) {
+  .container {
+    width: 95%;
+  }
 }

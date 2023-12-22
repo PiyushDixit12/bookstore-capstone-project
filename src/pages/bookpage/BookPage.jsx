@@ -78,14 +78,17 @@ export const BookPage = () => {
                     {booksLoading || booksFetching ? <Loader /> : null}
                     {booksError ? <>something went wrong while fetch data</> : null}
                     {!booksLoading && !booksFetching ? <div className="search-input-container">
+                        <div className='search-name-author-container'>
                         <div className="search-name-container">
                             <SearchInputForm darkShadow={false} searchInputPlaceHolder={"Search books by name"} defaultValue={handleName} onInputChange={(e) => {setHandleName(e.target.value)}} onSearchClick={() => onSearchName(handleName)} />
                         </div>
-                        <div className='search-author-price-container'>
+                            {/* <div className='search-author-price-container'> */}
                             <div className="search-author-container" >
                                 <SearchInputForm darkShadow={false} searchInputPlaceHolder={"Search books by author"} defaultValue={handleAuthorName} onInputChange={(e) => {setHandleAuthorName(e.target.value)}} onSearchClick={() => onSearchAuthorName(handleAuthorName)} />
                             </div>
-                            <div className="search-price-container">
+                        </div>
+                        <div className='search-categories-type-container'>
+                            <div className="search-categories-container">
                                 {/* <SearchInputForm darkShadow={false} searchInputPlaceHolder={"Search books by price"} onInputChange={(e) => {setSearchName(e.target.value)}} onSearchClick={onSearch} /> */}
                                 <div className={`light-shadow search-input-form-container`}>
                                     <select name="categories" className='search-input' id="" onChange={(e) => onSearchCategoriesName(e.target.value)}>
@@ -103,7 +106,7 @@ export const BookPage = () => {
                                 </div>
 
                             </div>
-                            <div className="search-price-container">
+                            <div className="search-type-container">
 
                                 <div className={`light-shadow search-input-form-container`}>
                                     <select name="book_type" className='search-input' id="" onChange={(e) => {onSearchTypeName(e.target.value)}}>
@@ -113,11 +116,9 @@ export const BookPage = () => {
 
                                 </div>
 
-                            </div>
-                            {/* <div className="search-release-date-container">
-                            <SearchInputForm darkShadow={false} searchInputPlaceHolder={"Search books by release date"} onInputChange={(e) => {setSearchName(e.target.value)}} onSearchClick={onSearch} />
-                        </div> */}
-                        </div>
+                            </div>    
+                        </div>      
+                        {/* </div> */}
                     </div> : null}
                 </div>
             </div>

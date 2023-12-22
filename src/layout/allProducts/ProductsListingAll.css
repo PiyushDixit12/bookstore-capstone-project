@@ -4,12 +4,32 @@
 }
 
 .grid-container {
-    display: grid;
+    /* display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 5rem;
+    */ display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .grid-item {
     display: flex;
     justify-content: center;
+}
+@media (max-width:603px) {
+    .grid-container {
+        grid-template-columns: auto !important;
+    }
+}
+
+@media screen and (max-width:1265px) and (min-width:603px) {
+    .grid-container {
+        grid-template-columns: auto auto !important;
+    }
+}
+
+@media (max-width:1508px) and (min-width:1265px) {
+    .grid-container {
+        grid-template-columns: auto auto auto !important;
+    }
 }

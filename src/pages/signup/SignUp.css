@@ -27,3 +27,20 @@
     padding-bottom: 1rem;
     font-size: 2rem;
 }
+@media screen and (max-width:768px) {
+    .signup-container {
+        height: 100vh;
+    }
+
+    .signup-img-container {
+        display: none;
+    }
+
+    .signup-content-container {
+        width: 100%;
+    }
+
+    .content-wrapper {
+        padding-right: 10%;
+    }
+}

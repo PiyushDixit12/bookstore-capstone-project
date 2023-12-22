@@ -41,3 +41,22 @@
     padding-top: 1rem;
     color: var(--primary-color-bright);
 }
+@media screen and (max-width:720px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .book-img-contianer {
+        display: flex;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+    }
+
+    .book-detail-container {
+        margin-top: 1rem !important;
+        width: 100%;
+    }
+}
