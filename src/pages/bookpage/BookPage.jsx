@@ -10,6 +10,8 @@ import {addAllBooks,getAllBooks} from '../../redux/BookSlice'
 import {GenreSearchBar} from '../../component/common/GenrecSearchBar'
 import {useGetAllBooksQuery} from '../../service/bookService'
 import {Loader} from '../../component/loader/Loader'
+import {NoDataFound} from '../../component/noDataFound/NoDataFound'
+import {SomeThingWrong} from '../../component/somethingwentWrong/SomeThingWrong'
 export const BookPage = () => {
 
     const dispatch = useDispatch();
@@ -68,21 +70,17 @@ export const BookPage = () => {
     return (
         <section>
             <Navbar darkTheme={true} />
-            {/* <GenreSearchBar /> */}
             <div className='search-container '>
                 <div className="search-container-text">
                     <h2>Find the <span className='text-primary'>Books</span> that you want </h2>
                 </div>
 
                 <div className="container">
-                    {booksLoading || booksFetching ? <Loader /> : null}
-                    {booksError ? <>something went wrong while fetch data</> : null}
                     {!booksLoading && !booksFetching ? <div className="search-input-container">
                         <div className='search-name-author-container'>
                         <div className="search-name-container">
                             <SearchInputForm darkShadow={false} searchInputPlaceHolder={"Search books by name"} defaultValue={handleName} onInputChange={(e) => {setHandleName(e.target.value)}} onSearchClick={() => onSearchName(handleName)} />
-                        </div>
-                            {/* <div className='search-author-price-container'> */}
+                            </div>
                             <div className="search-author-container" >
                                 <SearchInputForm darkShadow={false} searchInputPlaceHolder={"Search books by author"} defaultValue={handleAuthorName} onInputChange={(e) => {setHandleAuthorName(e.target.value)}} onSearchClick={() => onSearchAuthorName(handleAuthorName)} />
                             </div>
@@ -118,14 +116,15 @@ export const BookPage = () => {
 
                             </div>    
                         </div>      
-                        {/* </div> */}
                     </div> : null}
                 </div>
             </div>
 
-
+            {booksLoading || booksFetching ? <Loader /> : null}
+            {booksError ? <><SomeThingWrong /> </> : null}
             {filterBooks && filterBooks.length && !booksLoading && !booksError && !booksFetching ?
-                <ProductsListingAll books={filterBooks} /> : "NO data Availabel"}
+                <ProductsListingAll books={filterBooks} /> : null}
+            {filterBooks?.length == 0 && !booksLoading && !booksError && !booksFetching && <NoDataFound />}
             <Footer />
         </section>
     )

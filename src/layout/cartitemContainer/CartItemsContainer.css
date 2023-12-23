@@ -1,3 +1,4 @@
 .cart-items-container {
     padding: 5% 0;
+    min-height: 60vh;
 }

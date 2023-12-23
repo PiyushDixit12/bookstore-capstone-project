@@ -9,6 +9,8 @@ import {Loader} from '../../component/loader/Loader'
 import {myDataBase} from '../../firebase/firebase'
 // import {myDataBase,doc,updateDoc} from "../firebase/firebase";
 import {collection,doc,getDocs,query,updateDoc,where} from "firebase/firestore";
+import {SomeThingWrong} from '../../component/somethingwentWrong/SomeThingWrong'
+import {NoDataFound} from '../../component/noDataFound/NoDataFound'
 export const ProductDetail = () => {
     const {id: data} = useParams();
 
@@ -83,7 +85,7 @@ export const ProductDetail = () => {
     return (
         <section className='detail-section-container'>
             {bookDataLoading ? <><Loader /></> : null}
-            {bookDataError ? <> something went wrong while fetching data</> : null}
+            {bookDataError ? <> <SomeThingWrong /></> : null}
             {booksData?.results?.length && <div className="container">
                 {/* {booksData?.results?.length && <div className="container"> */}
                 <div className="flex-container">
@@ -103,6 +105,9 @@ export const ProductDetail = () => {
                     </div>
                 </div>
             </div>}
+            {booksData?.results?.length == 0 && <>
+                <NoDataFound />
+            </>}
         </section>
     )
 }

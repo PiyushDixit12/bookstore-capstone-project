@@ -1,0 +1,8 @@
+.No-Data-Available-container {
+    margin: 4% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}

@@ -40,18 +40,15 @@
 }
 
 @media screen and (max-width:460px) {
-    :root {
+     :root {
         font-size: 0.7rem;
     }
-
     .search-categories-type-container {
         flex-wrap: wrap;
     }
-
     .search-categories-container {
         width: 100% !important;
     }
-
     .search-type-container {
         width: 100% !important;
         margin-right: 10px;
@@ -64,12 +61,10 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
-
     .search-categories-type-container {
         width: 100%;
         justify-content: center !important;
     }
-
     .search-name-container,
     .search-author-container {
         width: 100% !important;
@@ -82,67 +77,12 @@
         width: 100%;
         justify-content: space-between;
     }
-
     .search-name-container,
     .search-author-container {
         width: 50%;
         margin-right: 3px;
     }
-
     .search-categories-type-container {
         width: 100%;
     }
 }
-
-
-/* .search-container {
-    width: 100%;
-    padding-top: 5%;
-}
-
-.search-author-price-container {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.search-input-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.search-name-container {
-    width: 40%;
-    /* margin-left: 5%; 
-}
-
-.search-author-container,
-.search-price-container,
-.search-release-date-container {
-    /* width: 25%; 
-    margin-left: 1%;
-}
-
-.search-price-container {
-    display: flex;
-    align-items: center;
-}
-
-.search-container h2 {
-    text-align: center;
-    padding-bottom: 1rem;
-}
-@media screen and (max-width:768px) {
-    .search-name-container {
-        width: 100%;
-    }
-
-    /* .search-author-container {
-        width: 90%;
-    }
-}
-
-*/
