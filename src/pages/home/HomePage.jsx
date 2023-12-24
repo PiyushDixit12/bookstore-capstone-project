@@ -9,10 +9,10 @@ export const HomePage = () => {
         <>
             <section className='showcase-container'>
                 <Navbar darkTheme={false} />
-                <div className='overlay'></div>
+                <div className='overlay' data-testid="overlay"></div>
                 <div className='showcase-content'>
 
-                    <h1> A Room Without <span className=' text-primary'> Books </span> is </h1><h1>  Like a Body Without Soul</h1>
+                    <h1 data-testid="rome-without-h1"> A Room Without <span className=' text-primary' data-testid="span-book"> Books </span> is </h1><h1>  Like a Body Without Soul</h1>
                     {/* <h1> Best <span className=' text-primary'> Books</span>  Available </h1>
                     <p>buy quality books at cheaper price</p>
                     <SearchInputForm darkShadow={true}

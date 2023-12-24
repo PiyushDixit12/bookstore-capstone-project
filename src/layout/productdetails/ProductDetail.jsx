@@ -20,23 +20,12 @@ export const ProductDetail = () => {
 
     const user = useContext(userContext);
     const [book,setBook] = useState({});
-    // const booksData = useSelector(state => {
-    //     console.log("Products ===========",state);
-    //     return state.books;
-    // });
-    // console.log(booksData);
+
     const {data: booksData,isLoading: bookDataLoading,isError: bookDataError} = useGetBookByAuthorAndTitleQuery(searchobj);
     const cartData = useSelector((state) => {
         return state.cart;
     })
-    useEffect(() => {
-        console.log("fetching data");
-        // const getdata = async () => {
-        //     let data = await fetchData();
-        //     setBooksData(data);
-        // }
-        // getdata();
-    },[])
+
     const dispatch = useDispatch();
     const updateFireStoreDoc = async (state,uid) => {
         const q = query(collection(myDataBase,"userCartData"),where("uid","==",uid));

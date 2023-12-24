@@ -5,7 +5,7 @@ import {Footer} from '../../layout/footer/Footer'
 
 export const BookDetailsPage = () => {
     return (
-        <section>
+        <section data-testid="book-details-page">
             <Navbar darkTheme={true} />
             <ProductDetail />
             <Footer />

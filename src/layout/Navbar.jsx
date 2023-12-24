@@ -1,6 +1,7 @@
 import React,{useContext,useState} from 'react'
 import './Navbar.css'
 import {Link,NavLink,useNavigate} from 'react-router-dom'
+import {createUserWithEmailAndPassword,signInWithEmailAndPassword} from 'firebase/auth';
 import {path} from '../routes/RouteConstant'
 import {userContext} from '../App'
 import {auth} from '../firebase/firebase'
@@ -29,7 +30,7 @@ export const Navbar = ({darkTheme,darkTextTheme}) => {
     }
     return (
 
-        <div className={`navbar-container ${darkTheme ? 'background-dark position-relative' : 'background-transparent'} `}>
+        <div data-testid={"navbarContainer"} className={`navbar-container ${darkTheme ? 'background-dark position-relative' : 'background-transparent'} `}>
             <div className='container flex justify-between align-center'>
 
                 <a href="/" className='logo'> Book<span className='text-primary'>store</span> </a>
@@ -40,7 +41,7 @@ export const Navbar = ({darkTheme,darkTextTheme}) => {
                     <button className='close' onClick={toggleNavbar}>  <GiSplitCross size={20} /></button>
                     <NavLink to={path.Home.path} className={` ${darkTextTheme ? 'nav-links-dark' : "nav-links"}`}> Home</NavLink>
                     <NavLink to={path.BooksPage.path} className={` ${darkTextTheme ? 'nav-links-dark' : "nav-links"}`}>Books</NavLink>
-                    <Link className={` ${darkTextTheme ? 'nav-links-dark' : "nav-links"}`} onClick={logout}> logout</Link>
+                    <Link className={` ${darkTextTheme ? 'nav-links-dark' : "nav-links"}`} onClick={logout} data-testid={"logout"}> logout</Link>
                     <NavLink to={path.cart.path} className={` ${darkTextTheme ? 'nav-links-dark' : "nav-links"}`}> <FaShoppingCart size={20} style={{marginTop: "5px"}} /></NavLink> 
 
 

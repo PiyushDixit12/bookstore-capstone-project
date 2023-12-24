@@ -3,6 +3,7 @@ import './Footer.css'
 import emailjs from '@emailjs/browser'
 import {Field,Form,Formik} from 'formik';
 import * as yup from 'yup';
+import {toast} from 'react-toastify';
 const serviceId = "service_hudclxo";
 const templetId = "template_sg212jv";
 const publicKey = "hmcfOZhjGCeHLqW1m";
@@ -22,11 +23,11 @@ export const Footer = () => {
             console.log(resp);
             console.log("===================sended succeffuly ====================");
         }).catch(err => console.log(err));
-        e.target.reset();
+
     }
 
     return (
-        <section className='footer-container'>
+        <section data-testid="footer" className='footer-container'>
             <div className="container">
                 <h2>If you have any query feel free to ask here</h2>
                 <Formik
@@ -36,9 +37,20 @@ export const Footer = () => {
                         message: ""
                     }}
                     validationSchema={validationQuery}
-                    onSubmit={(values) => {
+                    onSubmit={(values,{resetForm}) => {
                         handleEmailSubmit(values);
-                        console.log(values)
+                        console.log(values);
+                        toast.success("🎉🎉 Query submited successfully 🎉🎉",{
+                            position: "top-center",
+                            autoClose: 5000,
+                            hideProgressBar: false,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                        });
+                        resetForm();
                     }}
                 >
                     {({handleBlur,handleChange,handleSubmit}) => {
@@ -57,7 +69,7 @@ export const Footer = () => {
                     </div>
                             <div className="form-group">
                         <label htmlFor="email" className='form-label'>Email :</label>
-                        <input type="email"
+                                <Field type="email"
                             id='email'
                             name='user_email'
                                     onBlur={handleBlur}
@@ -67,10 +79,10 @@ export const Footer = () => {
                             </div>
                             <div className="form-group">
                         <label htmlFor="query" className='form-label'>Query : </label>
-                        <textarea className='form-input' name='message'
+                                <Field className='form-input' name='message'
                                     onBlur={handleBlur}
                                     onChange={handleChange}
-                            placeholder="Type your Query" ></textarea>
+                                    placeholder="Type your Query" ></Field>
                     </div>
                     <div className="form-group">
                                 <input type='submit' value="Submit" 
